@@ -10,7 +10,9 @@ function getRandomAnswer(message) {
 module.exports = (message) => {
   const member = message.mentions.members.first();
   if (!member) {
-    return message.reply(`Utilisateur pas trouvé ou pas spécifié`);
+    return message.reply(
+      `Utilisateur introuvable, serait il déjà passé sur le siège éjectable ?`
+    );
   }
   if (!member.kickable) {
     return message.reply(`L'utilisateur n'est pas kickable`);
