@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const kick = require("./kick");
+require("dotenv").config();
 const client = new Discord.Client();
 const action = require("./Commands/action");
 client.once("ready", () => {
@@ -17,9 +18,9 @@ client.on("message", (message) => {
 
   if (message.content === "/members") {
     message.channel.send(
-      `Il y a aujourd'hui un pilote et  ${message.guild.memberCount} membres d'équipage !`
+      `Il y a aujourd'hui un pilote et ${message.guild.memberCount} membres d'équipage !`
     );
   }
 });
 
-client.login("ODYwNDA5Mzc5MTcwMDI1NDg0.YN60rQ.ClwoHBJle7t1y1EllLIIgk12FoE");
+client.login(process.env.KEY);
