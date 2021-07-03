@@ -1,6 +1,6 @@
 function getRandomAnswer(message) {
   const answers = [
-    `L'utilisateur ${message.user.tag} a été mis sur le siège éjectable, c'est ce qu'il t'attends si tu ne respècte pas le règlement de l'équipage petit pirate !`,
+    `L'utilisateur ${message.user.tag} a été mis sur le siège éjectable direct, c'est ce qu'il t'attends si tu ne respècte pas le règlement de l'équipage petit pirate !`,
     `Un kick de perdu 10 de retrouvés ! Bye bye ${message.user.tag}`,
   ];
   const randomNumber = Math.floor(Math.random() * answers.length);
